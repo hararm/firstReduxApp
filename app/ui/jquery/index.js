@@ -4,6 +4,7 @@ import {addRecipe} from 'actions/actions.js'
 
 function updateUI() {
 	const { recipes } = store.getState();
+	console.log(store.getState());
 	const renderRecipe = (recipe) => `<li>${recipe.name}</li>`;
 	$(`.recipes > ul`).html(recipes.map(renderRecipe));
 }
