@@ -2,7 +2,7 @@ import 'normalize.css/normalize.css';
 import 'assets/stylesheets/main.css';
 import store from 'store/store';
 import loadUI from 'ui/jquery/index';
-import { fetchRecipes } from 'actions/actions'
+import { fetchRecipes } from 'actions/recipes'
 
 loadUI();
 store.dispatch(fetchRecipes());

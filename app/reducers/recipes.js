@@ -1,5 +1,5 @@
 
-import {ADD_RECIPE, SET_RECIPES} from 'actions/actions.js';
+import {ADD_RECIPE, SET_RECIPES} from '../actions/action-types';
 
 const recipesReducer = (recipes = [], action) => {
 	switch (action.type) {

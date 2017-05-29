@@ -1,4 +1,4 @@
-import {ADD_INGREDIENT} from 'actions/actions.js';
+import {ADD_INGREDIENT} from '../actions/action-types';
 
 const ingredientsReducer = (ingredients = [], action) => {
 	switch (action.type) {

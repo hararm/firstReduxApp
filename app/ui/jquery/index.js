@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import store from 'store/store';
-import {addRecipe} from 'actions/actions.js'
+import {addRecipe} from '../../actions/recipes'
 
 function updateUI() {
 	const { recipes } = store.getState();
@@ -13,7 +13,6 @@ function handleAdd() {
 	const $recipeName = $('.recipes > input');
 	store.dispatch(addRecipe($recipeName.val()));
 	$recipeName.val('');
-
 }
 
 export default function loadUI() {

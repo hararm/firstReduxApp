@@ -1,5 +1,11 @@
-import {createStore} from 'redux';
-import {initialState} from '../state.js';
-import rootReducer from 'reducers/root.js';
+import {createStore, applyMiddleware} from 'redux';
+import rootReducer from '../reducers/root';
+import logMiddleware from '../middleware/log'
+import apiMiddleware from '../middleware/api';
+import {initialState} from '../state'
 
-export default createStore(rootReducer, initialState);
+export default createStore(
+	rootReducer,
+	initialState,
+	applyMiddleware(logMiddleware, apiMiddleware)
+);
